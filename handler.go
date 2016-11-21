@@ -15,6 +15,11 @@ func sayhelloName(w http.ResponseWriter, r *http.Request) {
 }
 
 func follow(w http.ResponseWriter, r *http.Request) {
+	// if checkSignature(r) {
+	fmt.Fprint(w, r.FormValue("echostr"))
+	// } else {
+	// 	fmt.Fprint(w, "hello wixin sb ") //这个写入到w的是输出到客户端的
+	// }
 	if r.Method != "POST" {
 		return
 	}
@@ -141,11 +146,5 @@ func follow(w http.ResponseWriter, r *http.Request) {
 			log.Println("request", request)
 		}
 	}
-
-	// if checkSignature(r) {
-	// 	fmt.Fprint(w, r.FormValue("echostr"))
-	// } else {
-	// 	fmt.Fprint(w, "hello wixin sb ") //这个写入到w的是输出到客户端的
-	// }
 
 }

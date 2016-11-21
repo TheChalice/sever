@@ -27,8 +27,8 @@ func updatatoken() {
 	f := func() {
 		v := url.Values{}
 		v.Set("grant_type", "client_credential")
-		v.Set("appid", "wxd653a9d6ef5659ab")
-		v.Set("secret", "114967dd70de0c89469d94f3ef493d35")
+		v.Set("appid", "wx7597fee76b4d1d29")
+		v.Set("secret", "1c5dc05d29ce7e13fc90f96ebf6bdbc4")
 		//url:=url.URL
 		r, err := http.Get("https://api.weixin.qq.com/cgi-bin/token?" + v.Encode())
 		if err != nil {
