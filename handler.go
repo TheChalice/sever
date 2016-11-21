@@ -16,7 +16,7 @@ func sayhelloName(w http.ResponseWriter, r *http.Request) {
 
 func follow(w http.ResponseWriter, r *http.Request) {
 	// if checkSignature(r) {
-	fmt.Fprint(w, r.FormValue("echostr"))
+	// fmt.Fprint(w, r.FormValue("echostr"))
 	// } else {
 	// 	fmt.Fprint(w, "hello wixin sb ") //这个写入到w的是输出到客户端的
 	// }
